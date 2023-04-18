@@ -17,7 +17,7 @@
             <div class="card col-sm-10">
                 <div class="card body text-center">
                     <form>
-                        <label> Bienvenido a atitUp </label>
+                        <label> Bienvenido a atitUp :) </label>
                     <div>
                      <input type="submit" name="accion" value="Ingresar como administrador">
                     </div>
