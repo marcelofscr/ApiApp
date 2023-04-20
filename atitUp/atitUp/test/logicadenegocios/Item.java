@@ -10,11 +10,13 @@ package logicadenegocios;
  */
 public class Item implements iItem{
     private String prompt;
-    private String respuesta;
-    private String ejemplo;
+    private Respuesta respuesta;
+    private Ejemplo ejemplo;
     private String fuenteRespuesta;
     private String fuenteEjemplo;
     private CategoriaConceptual categoria;
+    
+    
     public Item()
     {
         
@@ -55,6 +57,30 @@ public class Item implements iItem{
         return prompt;
     }
     
+    public void setRespuesta(String pRespuesta)
+    {
+        Respuesta tRespuesta;
+        tRespuesta = new Respuesta(pRespuesta);
+        this.respuesta = tRespuesta;
+    }
+    
+    public void setEjemplo(String pEjemplo)
+    {
+        Ejemplo tEjemplo;
+        tEjemplo = new Ejemplo(pEjemplo);
+        this.ejemplo = tEjemplo;
+    }
+    
+    
+    public void agregarValoracionRespuesta(String pComentario, int pEstrella)
+    {
+        this.respuesta.agregarValoracionRespuesta(pComentario, pEstrella);
+    }
+    
+    public void agregarValoracionEjemplo(String pComentario, int pEstrella)
+    {
+        this.ejemplo.agregarValoracionEjemplo(pComentario, pEstrella);
+    }
     
     
     

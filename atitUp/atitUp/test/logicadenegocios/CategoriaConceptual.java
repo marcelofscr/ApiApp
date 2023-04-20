@@ -26,6 +26,8 @@ public class CategoriaConceptual {
         this.nombre = pNombre;
         this.descripcion = pDescripcion;
         this.codigoCategoria = generarNumeroRandom();
+        items = new ArrayList<>();
+        cursos = new ArrayList<>();
         
     }
     
@@ -47,6 +49,11 @@ public class CategoriaConceptual {
         return number;
     }
     
+    
+    public ArrayList<iItem> getItems()
+    {
+        return items;
+    }
     
     
     
