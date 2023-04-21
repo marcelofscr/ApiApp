@@ -42,14 +42,27 @@ public class Item implements iItem{
         this.fuenteEjemplo = fuenteEjemplo;
     }
 
+    @Override
     public String getFuenteRespuesta() {
         return fuenteRespuesta;
     }
 
+    @Override
     public String getFuenteEjemplo() {
         return fuenteEjemplo;
     }
     
+    @Override
+    public String getTextoEjemplo()
+    {
+        return ejemplo.getTextoEjemplo();
+    }
+    
+    @Override
+    public String getTextoRespuesta()
+    {
+        return respuesta.getTextoRespuesta();
+    }
   
     @Override
     public String getPrompt()
@@ -82,7 +95,24 @@ public class Item implements iItem{
         this.ejemplo.agregarValoracionEjemplo(pComentario, pEstrella);
     }
     
+    @Override
+    public int getPonderadoValoracionesEjemplo()
+    {
+        return this.ejemplo.getValorPonderadoEjemplo();
+    }
     
+    @Override
+    public int getPonderadoValoracionesRespuesta()
+    {
+        return this.respuesta.getValorPonderadoRespuesta();
+    }
     
+    @Override
+    public int getPonderadoTotalItem()
+    {
+        return (respuesta.getSumaEstrellas() + (ejemplo.getSumaEstrellas()) / ejemplo.getCantidadValoraciones());
+    }
+    
+   
     
 }

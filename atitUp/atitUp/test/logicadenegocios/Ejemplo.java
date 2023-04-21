@@ -16,19 +16,19 @@ public class Ejemplo {
     private ArrayList<Valoracion> valoraciones;
     
     
-    public Ejemplo(String pTextoPregunta)
+    public Ejemplo(String pTextoEjemplo)
     {
-        this.textoEjemplo = pTextoPregunta;
+        this.textoEjemplo = pTextoEjemplo;
         valoraciones = new ArrayList();
     }
 
-    public void setTextoPregunta(String textoPregunta) {
-        this.textoEjemplo = textoPregunta;
+    public void setTextoEjemplo(String textoEjemplo) {
+        this.textoEjemplo =  textoEjemplo;
     }
 
     
 
-    public String getTextoPregunta() {
+    public String getTextoEjemplo() {
         return textoEjemplo;
     }
 
@@ -41,7 +41,28 @@ public class Ejemplo {
     }
     
     
-    /*Hola Jime! :)*/
+    public int getSumaEstrellas()
+    {
+      int i = 0;
+      int suma;
+      for(Valoracion v: valoraciones)
+      {
+          i +=  v.getEstrella();
+      }
+       suma = i; 
+       return suma;
+    }
+    
+    public int getValorPonderadoEjemplo()
+    {
+       return getSumaEstrellas()/getCantidadValoraciones();
+    }
+    
+    
+    public int getCantidadValoraciones()
+    {
+        return this.valoraciones.size();
+    }
     
     
 }

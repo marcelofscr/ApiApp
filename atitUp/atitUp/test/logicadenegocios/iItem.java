@@ -11,4 +11,11 @@ package logicadenegocios;
 public interface iItem {
     
     public String getPrompt();
+    public int getPonderadoValoracionesEjemplo();
+    public int getPonderadoValoracionesRespuesta();
+    public int getPonderadoTotalItem();
+    public String getTextoRespuesta();
+    public String getTextoEjemplo();
+    public String getFuenteEjemplo();
+    public String getFuenteRespuesta();
 }

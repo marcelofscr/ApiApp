@@ -40,4 +40,29 @@ public class Respuesta {
         
     }
     
+    public int getSumaEstrellas()
+    {
+      int i = 0;
+      int suma;
+      for(Valoracion v: valoraciones)
+      {
+          i +=  v.getEstrella();
+      }
+       suma = i; 
+       return suma;
+    }
+    
+    public int getValorPonderadoRespuesta()
+    {
+       return getSumaEstrellas()/getCantidadValoraciones();
+    }
+    
+    
+    public int getCantidadValoraciones()
+    {
+        return this.valoraciones.size();
+    }
+    
+    
+    
 }

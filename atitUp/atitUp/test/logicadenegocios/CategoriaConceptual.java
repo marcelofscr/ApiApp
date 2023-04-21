@@ -1,7 +1,12 @@
 package logicadenegocios;
 
+import comparadores.itemPromptComparator;
+import comparadores.itemValoracionEjemploComparator;
+import comparadores.itemValoracionRespuestasComparator;
+import comparadores.itemValoracionTotalItemComparator;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -54,6 +59,43 @@ public class CategoriaConceptual {
     {
         return items;
     }
+    
+    public ArrayList<iItem> getItemsAlfabeticamente()
+    {
+      ArrayList<iItem> aux;
+      aux = items;
+      Collections.sort(aux,new itemPromptComparator());
+      return aux;
+    }
+    
+     public ArrayList<iItem> getItemsPorValoracionRespuestas()
+    {
+      
+      ArrayList<iItem> aux;
+      aux = items;
+      Collections.sort(aux,new itemValoracionRespuestasComparator());
+      return aux;
+      
+    }
+     
+     public ArrayList<iItem> getItemsPorValoracionesEjemplos()
+     {
+        ArrayList<iItem> aux;
+        aux = items;
+        Collections.sort(aux,new itemValoracionEjemploComparator());
+        return aux;
+     }
+     
+     public ArrayList<iItem> getItemsValoracionTotal()
+     {
+        ArrayList<iItem> aux;
+        aux = items;
+        Collections.sort(aux,new itemValoracionTotalItemComparator());
+        return aux;
+     }
+     
+     
+     
     
     
     
