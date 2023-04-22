@@ -35,7 +35,43 @@ public class CategoriaConceptual {
         cursos = new ArrayList<>();
         
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getCodigoCategoria() {
+        return codigoCategoria;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public ArrayList<iCurso> getCursos() {
+        return cursos;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCodigoCategoria(int codigoCategoria) {
+        this.codigoCategoria = codigoCategoria;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public void setCursos(ArrayList<iCurso> cursos) {
+        this.cursos = cursos;
+    }
     
+    public int getSizeItems()
+    {
+        return items.size();
+    }
     
     public void agregarCurso(Curso pCurso)
     {
@@ -60,6 +96,7 @@ public class CategoriaConceptual {
         return items;
     }
     
+   /* 
     public ArrayList<iItem> getItemsAlfabeticamente()
     {
       ArrayList<iItem> aux;
@@ -95,6 +132,22 @@ public class CategoriaConceptual {
      }
      
      
+     public ArrayList<iItem> getTopXItems(int pTopX)
+     {
+         ArrayList<iItem> aux = getItemsAlfabeticamente();
+         while (aux.size() > pTopX) {
+            aux.remove(aux.size() - 1); 
+           }
+         return aux;
+     }
+     
+     
+ */
+
+     }
+     
+     
+     
      
     
     
@@ -102,4 +155,4 @@ public class CategoriaConceptual {
     
     
     
-}
+

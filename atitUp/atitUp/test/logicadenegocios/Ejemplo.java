@@ -14,7 +14,7 @@ public class Ejemplo {
     
     private String textoEjemplo;
     private ArrayList<Valoracion> valoraciones;
-    
+      private String fuenteEjemplo;
     
     public Ejemplo(String pTextoEjemplo)
     {
@@ -38,6 +38,15 @@ public class Ejemplo {
         Valoracion tValoracion = new Valoracion(pComentario, pEstrellas);
         this.valoraciones.add(tValoracion);
         
+    }
+    
+     public void setFuenteEjemplo(String fuenteEjemplo) {
+        this.fuenteEjemplo = fuenteEjemplo;
+    }
+     
+     
+    public String getFuenteEjemplo() {
+        return fuenteEjemplo;
     }
     
     

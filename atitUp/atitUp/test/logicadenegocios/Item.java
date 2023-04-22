@@ -12,8 +12,8 @@ public class Item implements iItem{
     private String prompt;
     private Respuesta respuesta;
     private Ejemplo ejemplo;
-    private String fuenteRespuesta;
-    private String fuenteEjemplo;
+    
+  
     private CategoriaConceptual categoria;
     
     
@@ -34,23 +34,7 @@ public class Item implements iItem{
         this.categoria = pCategoria;
     }
 
-    public void setFuenteRespuesta(String fuenteRespuesta) {
-        this.fuenteRespuesta = fuenteRespuesta;
-    }
-
-    public void setFuenteEjemplo(String fuenteEjemplo) {
-        this.fuenteEjemplo = fuenteEjemplo;
-    }
-
-    @Override
-    public String getFuenteRespuesta() {
-        return fuenteRespuesta;
-    }
-
-    @Override
-    public String getFuenteEjemplo() {
-        return fuenteEjemplo;
-    }
+    
     
     @Override
     public String getTextoEjemplo()
@@ -62,6 +46,18 @@ public class Item implements iItem{
     public String getTextoRespuesta()
     {
         return respuesta.getTextoRespuesta();
+    }
+    
+    @Override
+    public String getFuenteRespuesta()
+    {
+        return this.respuesta.getTextoRespuesta();
+    }
+    
+    @Override
+    public String getFuenteEjemplo()
+    {
+        return this.ejemplo.getFuenteEjemplo();
     }
   
     @Override
@@ -110,7 +106,7 @@ public class Item implements iItem{
     @Override
     public int getPonderadoTotalItem()
     {
-        return (respuesta.getSumaEstrellas() + (ejemplo.getSumaEstrellas()) / ejemplo.getCantidadValoraciones());
+        return (respuesta.getSumaEstrellas() + (ejemplo.getSumaEstrellas()) / (ejemplo.getCantidadValoraciones() + respuesta.getCantidadValoraciones()));
     }
     
    

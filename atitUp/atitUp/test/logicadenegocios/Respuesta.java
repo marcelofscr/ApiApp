@@ -14,6 +14,7 @@ public class Respuesta {
     
     private String textoRespuesta;
     private ArrayList<Valoracion> valoraciones;
+    private String fuenteRespuesta;
     
     
     public Respuesta(String pTextoRespuesta)
@@ -38,6 +39,15 @@ public class Respuesta {
         Valoracion tValoracion = new Valoracion(pComentario, pEstrellas);
         this.valoraciones.add(tValoracion);
         
+    }
+    
+     public void setFuenteRespuesta(String fuenteRespuesta) {
+        this.fuenteRespuesta = fuenteRespuesta;
+    }
+
+   
+    public String getFuenteRespuesta() {
+        return fuenteRespuesta;
     }
     
     public int getSumaEstrellas()
