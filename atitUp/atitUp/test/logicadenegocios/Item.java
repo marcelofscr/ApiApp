@@ -1,4 +1,8 @@
 package logicadenegocios;
+
+import java.util.Random;
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -12,9 +16,8 @@ public class Item implements iItem{
     private String prompt;
     private Respuesta respuesta;
     private Ejemplo ejemplo;
-    
-  
     private CategoriaConceptual categoria;
+    private int idItem;
     
     
     public Item()
@@ -25,6 +28,23 @@ public class Item implements iItem{
     public Item(String pPrompt)
     {
         this.prompt = pPrompt;
+        this.idItem = NumeroRandom.generarNumeroRandom();
+    }
+
+    public void setPrompt(String prompt) {
+        this.prompt = prompt;
+    }
+
+    public void setRespuesta(Respuesta respuesta) {
+        this.respuesta = respuesta;
+    }
+
+    public void setEjemplo(Ejemplo ejemplo) {
+        this.ejemplo = ejemplo;
+    }
+
+    public void setIdItem(int idItem) {
+        this.idItem = idItem;
     }
     
     
@@ -32,6 +52,22 @@ public class Item implements iItem{
     public void setCategoria(CategoriaConceptual pCategoria)
     {
         this.categoria = pCategoria;
+    }
+
+    public Respuesta getRespuesta() {
+        return respuesta;
+    }
+
+    public Ejemplo getEjemplo() {
+        return ejemplo;
+    }
+
+    public CategoriaConceptual getCategoria() {
+        return categoria;
+    }
+
+    public int getIdItem() {
+        return idItem;
     }
 
     

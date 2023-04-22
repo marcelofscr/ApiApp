@@ -15,12 +15,20 @@ public class Respuesta {
     private String textoRespuesta;
     private ArrayList<Valoracion> valoraciones;
     private String fuenteRespuesta;
+    private int idRespuesta;
     
+    
+    
+    public Respuesta()
+    {
+        this.valoraciones = new ArrayList();
+    }
     
     public Respuesta(String pTextoRespuesta)
     {
         this.textoRespuesta = pTextoRespuesta;
-        valoraciones = new ArrayList();
+        this.valoraciones = new ArrayList();
+        this.idRespuesta = NumeroRandom.generarNumeroRandom();
     }
 
     public void setTextoRespuesta(String textoRespuesta) {

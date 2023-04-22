@@ -14,12 +14,20 @@ public class Ejemplo {
     
     private String textoEjemplo;
     private ArrayList<Valoracion> valoraciones;
-      private String fuenteEjemplo;
+    private String fuenteEjemplo;
+    private int idEjemplo;
+      
     
     public Ejemplo(String pTextoEjemplo)
     {
         this.textoEjemplo = pTextoEjemplo;
         valoraciones = new ArrayList();
+        this.idEjemplo = NumeroRandom.generarNumeroRandom();
+    }
+    
+    public Ejemplo()
+    {
+         valoraciones = new ArrayList();
     }
 
     public void setTextoEjemplo(String textoEjemplo) {

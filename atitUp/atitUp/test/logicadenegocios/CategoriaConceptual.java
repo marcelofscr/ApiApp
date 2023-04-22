@@ -30,11 +30,19 @@ public class CategoriaConceptual {
     {
         this.nombre = pNombre;
         this.descripcion = pDescripcion;
-        this.codigoCategoria = generarNumeroRandom();
+        this.codigoCategoria = NumeroRandom.generarNumeroRandom();
         items = new ArrayList<>();
         cursos = new ArrayList<>();
         
     }
+    
+    public CategoriaConceptual()
+    {
+        items = new ArrayList<>();
+        cursos = new ArrayList<>();
+    }
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -83,14 +91,7 @@ public class CategoriaConceptual {
        items.add(pItem);
     }
     
-    public int generarNumeroRandom()
-    {
-        Random rnd = new Random();
-        int number = rnd.nextInt(999999);
-        return number;
-    }
-    
-    
+ 
     public ArrayList<iItem> getItems()
     {
         return items;
