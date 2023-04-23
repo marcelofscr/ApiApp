@@ -80,6 +80,18 @@ public class Ejemplo {
     {
         return this.valoraciones.size();
     }
+
+    public void setIdEjemplo(int idEjemplo) {
+        this.idEjemplo = idEjemplo;
+    }
+
+    public ArrayList<Valoracion> getValoraciones() {
+        return valoraciones;
+    }
+
+    public int getIdEjemplo() {
+        return idEjemplo;
+    }
     
     
 }

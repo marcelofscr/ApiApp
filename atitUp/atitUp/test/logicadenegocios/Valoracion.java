@@ -44,6 +44,14 @@ public class Valoracion {
     public String getComentario() {
         return comentario;
     }
+
+    public void setIdValoracion(int idValoracion) {
+        this.idValoracion = idValoracion;
+    }
+
+    public int getIdValoracion() {
+        return idValoracion;
+    }
     
     
     

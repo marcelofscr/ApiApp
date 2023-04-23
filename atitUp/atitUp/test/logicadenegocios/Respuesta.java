@@ -80,6 +80,18 @@ public class Respuesta {
     {
         return this.valoraciones.size();
     }
+
+    public ArrayList<Valoracion> getValoraciones() {
+        return valoraciones;
+    }
+
+    public int getIdRespuesta() {
+        return idRespuesta;
+    }
+
+    public void setIdRespuesta(int idRespuesta) {
+        this.idRespuesta = idRespuesta;
+    }
     
     
     

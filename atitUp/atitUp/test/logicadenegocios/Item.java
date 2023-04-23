@@ -35,19 +35,9 @@ public class Item implements iItem{
         this.prompt = prompt;
     }
 
-    public void setRespuesta(Respuesta respuesta) {
-        this.respuesta = respuesta;
-    }
-
-    public void setEjemplo(Ejemplo ejemplo) {
-        this.ejemplo = ejemplo;
-    }
-
     public void setIdItem(int idItem) {
         this.idItem = idItem;
     }
-    
-    
     
     public void setCategoria(CategoriaConceptual pCategoria)
     {

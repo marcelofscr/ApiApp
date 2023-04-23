@@ -13,10 +13,9 @@ public class Curso implements iCurso{
     private String nombre;
     private String codigo;
     
-    public Curso(String pNombre, String pCodigo)
+    public Curso()
     {
-        this.nombre = pNombre;
-        this.codigo = pCodigo;
+       
     }
 
     public String getNombre() {

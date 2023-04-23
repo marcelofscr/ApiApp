@@ -4,32 +4,25 @@
  */
 package DAO;
 
-import ConexionMySQl.conexionMySql;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import logicadenegocios.CategoriaConceptual;
+import logicadenegocios.Valoracion;
 
 /**
  *
  * @author Agus
  */
-public class CategoriaDAO extends DAO {
+public class ValoracionDAO extends DAO{
     
-    
-    
-    
-    public int agregarCategoria(CategoriaConceptual pCategoria)
+    public int agregarValoracion(Valoracion pValoracion)
     {
-        String consulta = "insert into categoriaConceptual (codigoCategoria, nombre, descripcion) values(?,?,?)";
+        String consulta = "insert into valoracion (idValoracion, estrellas, comentario) values(?,?,?)";
         try
         {
             con = conexion.establecerConexion();
             ps = con.prepareStatement(consulta);
-            ps.setInt(1,pCategoria.getCodigoCategoria());
-            ps.setString(2,pCategoria.getNombre());
-            ps.setString(3,pCategoria.getDescripcion());
+            ps.setInt(1,pValoracion.getIdValoracion());
+            ps.setInt(2,pValoracion.getEstrella());
+            ps.setString(3,pValoracion.getComentario());
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null,"");
         }
@@ -40,7 +33,5 @@ public class CategoriaDAO extends DAO {
         return 1;
         
     }
-    
-    
     
 }
