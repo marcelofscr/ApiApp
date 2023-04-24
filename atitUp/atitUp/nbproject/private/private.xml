@@ -3,27 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/web/index.jsp</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/cursoDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/CategoriaCursoDao.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/logicadenegocios/iItem.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/CategoriaDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/logicadenegocios/CategoriaConceptual.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/EjemploDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/ItemEjemploDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/itemDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/RespuestaDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/ValoracionRespuestaDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/ConexionMySQl/conexionMySql.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/iCategoriaDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/logicadenegocios/Curso.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/ItemRespuestaDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/DAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/ValoracionEjemploDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/CategoriaItemDao.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/terceros/validarEmail.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/DAO/ValoracionDAO.java</file>
-            <file>file:/C:/Users/Agus/Desktop/PPD1/AtiUp/atitUp/atitUp/test/logicadenegocios/Item.java</file>
+            <file>file:/C:/Users/Fagares/Documents/GitHub/AtiUp/atitUp/atitUp/web/ingresarPromptAdmin.jsp</file>
+            <file>file:/C:/Users/Fagares/Documents/GitHub/AtiUp/atitUp/atitUp/web/WEB/classes/logicadenegocios/CategoriaConceptual.java</file>
         </group>
     </open-files>
 </project-private>

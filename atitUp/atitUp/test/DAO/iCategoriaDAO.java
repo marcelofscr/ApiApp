@@ -6,6 +6,7 @@ package DAO;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import logicadenegocios.CategoriaConceptual;
 
 /**
@@ -13,11 +14,10 @@ import logicadenegocios.CategoriaConceptual;
  * @author Daniella
  */
 public interface iCategoriaDAO {
-    CategoriaConceptual getCategoriaByName(String nombre) throws SQLException;
-    ArrayList<CategoriaConceptual> getAllCategorias() throws SQLException;
-    void addCategoria(CategoriaConceptual categoriaconceptual) throws SQLException;
-    void updateCategoria(CategoriaConceptual categoriaconceptual) throws SQLException;
-    void deleteCategoria(String nombre) throws SQLException;
+    public List listar();
+    public CategoriaConceptual list(int id);
+    
+    
 }
 
 
