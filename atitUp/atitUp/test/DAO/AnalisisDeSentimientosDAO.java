@@ -9,8 +9,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
+
+ /*
  * @author Usuario
  */
 public class AnalisisDeSentimientosDAO extends DAO{
@@ -105,3 +105,4 @@ public String analisisSentimientosComentario(int pIdItem, int pCodigoCategoria) 
     }
     return "No se pudo obtener el sentimiento del comentario.";
 }}
+
