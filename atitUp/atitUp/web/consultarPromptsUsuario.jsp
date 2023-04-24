@@ -4,6 +4,7 @@
     Author     : Daniella
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -66,44 +67,36 @@
 
         <!-- Grid para ingresar consulta -->
         <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-            <label for="items">Seleccionar Item:</label>
+            <label for="items">Seleccionar categoria:</label>
             <select name="items" id="items">
                 <option value="item1">Item 1</option>
                 <option value="item2">Item 2</option>
             </select>
         </div>
+        <input type="submit" name="listarCategorias" value="Listar categorias" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" href="consultarPromptUsuarioControlador?accion=consultarPromptsUsuario">
+    
 
         <!-- First Grid -->
         <div class="w3-row-padding w3-padding-64 w3-container">                     
           
             <table>
+                <thead>
                 <tr>
-                    <th>Categoria Conceptual</th>
-                    <th>ID</th>
-                    <th>Prompt</th>
-                    <th>Respuesta</th>
-                    <th>Fuente Respuesta</th>
-                    <th>Ejemplo</th>
-                    <th>Fuente Ejemplo</th>
+                    <th>Codigo de categoria</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
                 </tr>
+                </thead>
+                <tbody>
+                    <c:forEach var="em" items="${categorias}" >
+                    
                 <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
+                    <td>${em.getCodigoCategoria()}</td>
+                    <td>${em.getNombre()}</td>
+                    <td>${em.getDescripcion()}</td>
                 </tr>
-                <tr>
-                    <td>prueba02</td>
-                    <td>prueba02</td>
-                    <td>prueba02</td>
-                    <td>prueba02</td>
-                    <td>prueba02</td>
-                    <td>prueba02</td>
-                    <td>prueba02</td>
-                </tr>
+                </c:forEach>
+                </tbody>
             </table>
             
             <% String email = request.getParameter("email");%>

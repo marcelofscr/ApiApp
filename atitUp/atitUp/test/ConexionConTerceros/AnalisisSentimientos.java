@@ -17,6 +17,7 @@ import edu.stanford.nlp.sentiment.*;
  *
  * @author Usuario
  */
+
 public class AnalisisSentimientos {
   public static String main(String text_) {
     // crea una nueva instancia de StanfordCoreNLP con las propiedades requeridas
