@@ -40,8 +40,8 @@ public class RespuestaDAO extends DAO{
     {
         String consulta = "SELECT respuesta.respuesta"
                 + "FROM item"+
-                "JOIN item_respuesta ON item.idItem = item_respuesta.idItem"+
-                "JOIN respuesta ON item_respuesta.idRespuesta = respuesta.idRespuesta"+
+                "JOIN item_Respuesta ON item.idItem = item_Respuesta.idItem"+
+                "JOIN respuesta ON item_Respuesta.idRespuesta = respuesta.idRespuesta"+
                 "WHERE item.idItem ='" + pIdItem +"'";
         Respuesta respuesta = new Respuesta();
         try{

@@ -4,7 +4,10 @@
  */
 package DAO;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import logicadenegocios.Respuesta;
+import logicadenegocios.Valoracion;
 
 /**
  *
@@ -29,6 +32,34 @@ public class ValoracionRespuestaDAO extends DAO {
         }
         return 1;
         
+    }
+     
+     public ArrayList<Valoracion> getValoracionesRespuesta(String pIdRespuesta)
+    {
+        String consulta = "SELECT * FROM valoracion_Respuesta"+
+        "JOIN valoracion ON valoracion_Respuesta.idValoracion = valoracion.idValoracion"+
+         "WHERE valoracion_Respuesta.idRespuesta ='"+pIdRespuesta+"'";
+        ArrayList<Valoracion> valoraciones = new ArrayList();
+        try{
+            con = conexion.establecerConexion();
+            ps = con.prepareStatement(consulta);
+            rs = ps.executeQuery();
+            
+            while(rs.next())
+            {
+               Valoracion v = new Valoracion();
+               v.setIdValoracion(rs.getInt(1));
+               v.setEstrella(rs.getInt(2));
+               v.setComentario(rs.getString(3));
+               valoraciones.add(v);
+            }
+             
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,"Error"+ e.toString());
+        }
+        return valoraciones;
     }
     
 }

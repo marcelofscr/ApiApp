@@ -4,7 +4,9 @@
  */
 package DAO;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import logicadenegocios.Valoracion;
 
 /**
  *
@@ -30,5 +32,36 @@ public class ValoracionEjemploDAO extends DAO{
         return 1;
         
     }
+    
+    
+    public ArrayList<Valoracion> getValoracionesEjemplo(String pIdRespuesta)
+    {
+        String consulta = "SELECT * FROM valoracion_Ejemplo"+
+        "JOIN valoracion ON valoracion_Ejemplo.idValoracion = valoracion.idValoracion"+
+         "WHERE valoracion_Ejemplo.idEjemplo ='"+pIdRespuesta+"'";
+        ArrayList<Valoracion> valoraciones = new ArrayList();
+        try{
+            con = conexion.establecerConexion();
+            ps = con.prepareStatement(consulta);
+            rs = ps.executeQuery();
+            
+            while(rs.next())
+            {
+               Valoracion v = new Valoracion();
+               v.setIdValoracion(rs.getInt(1));
+               v.setEstrella(rs.getInt(2));
+               v.setComentario(rs.getString(3));
+               valoraciones.add(v);
+            }
+             
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,"Error"+ e.toString());
+        }
+        return valoraciones;
+    }
+    
+    
     
 }
