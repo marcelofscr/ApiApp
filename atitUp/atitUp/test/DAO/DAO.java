@@ -4,7 +4,7 @@
  */
 package DAO;
 
-import ConexionMySQl.conexionMySql;
+import ConexionConTerceros.conexionMySql;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
